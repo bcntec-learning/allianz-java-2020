@@ -7,6 +7,7 @@ public interface Oviparo {
 	default Huevo ponerHuevos() { //metodo por defecto
 		Huevo huevo =  new Huevo();
 		huevo.setColor(getColorHuevo());
+		return huevo;
 	}
 
 }
