@@ -1,0 +1,26 @@
+1.
+A. variables are local, and are not initialyzed, so compilation fails
+
+2.
+B. Main method is not static, so will throw an error when run.
+
+3.
+B. variable names may have only one word, and only $ and _ are allowed. Numbers are allowed but not at the beggining.
+
+4.
+ACG, for the same reason as 3.
+
+5.
+A,D. B will not compile because A compiles and the variables have the same name. C includes int, which makes not compile. E has a semicolon, and the latter part does not compile.
+
+6.
+C, E. Chaining asignation operators is allowed. These operators have the less precedence, and are evaluated from right-to-left.
+
+7.
+B. The main method is not public, so does not execute.
+
+8.
+B. the operations are run left to right, so the final result is 0.
+
+9.
+E. The first operation sets 9 to a. Later, the operation trasnlates to 8-7, which is 1.
