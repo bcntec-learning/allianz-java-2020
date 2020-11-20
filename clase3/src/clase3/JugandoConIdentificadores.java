@@ -51,6 +51,9 @@ public class JugandoConIdentificadores {
 			//nombre=null;
 			this.nombre=nombre; //sombra / shadow variable
 		}
+		public String getNombre() {
+			return this.nombre;
+		}
 	}
 	
 	class direccion { //no es recomendable, usar Kebab convention CambiarAMayusculasCadaPalabra
