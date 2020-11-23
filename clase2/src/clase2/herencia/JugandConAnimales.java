@@ -8,7 +8,7 @@ public class JugandConAnimales {
 		
 		System.out.println("Thomas es un "+thomas.getRaza());
 		
-		if(thomas instanceof Mamifero) {
+		if(thomas instanceof Mamifero) {  //IS-A
 			System.out.println("Thomas es un mamifero" );
 		}
 
