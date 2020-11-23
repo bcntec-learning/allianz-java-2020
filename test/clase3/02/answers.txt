@@ -1,0 +1,42 @@
+1.
+A, B, E
+Remember: $ and _ are allowed. Numbers are allowed but not at the start (so F si wrong). Reserved words are not allowed, such as <true> or <public>. But java is case sensitive, so Public is allowed.
+
+2.
+D. 
+Boolean fields initialize to false and references initialize to null , so empty is false and brand is null . Brand = null is output.
+
+3.
+A, B.
+If the vairable is an instance variable, the code will compile (no matter if it is declared after or before). If it is a local variable has to be declared before, and not inside a deeper block, because then it is local only to that block, and is not visible outside.
+
+4.
+B. 
+Option B is correct because arrays start counting from zero and strings with spaces must be in quotes. Option A is incorrect because it outputs Blue . C is incorrect because it outputs Jay . Option D is incorrect because it outputs Sparrow . Options E and F are
+incorrect because the .class makes it not work.
+
+5.
+A, C, D, E
+Variables may start with _ or $, so A and D are right. the [] may be before or after the variable identifier, so C and D are right. It is also valid a varargs as in E. 
+
+6.
+D. The package name represents any folders underneath the current path, which is named.A in this case. Option B is incorrect because package names are case sensitive, just like variable names and other identifiers.
+
+7.
+B, C, D. 
+0b is the prefix for a binary value and is correct. 0x is the prefix for a hexa-decimal value. This value can be assigned to many primitive types, including int and double , making options C and D correct. Option A is incorrect because 9L is a long
+value. long amount = 9L would be allowed. Option E is incorrect because the under- score is immediately before the decimal. Option F is incorrect because the underscore is the very last character.
+
+8.
+C, D, E. 
+package and import are both optional. If both are present, the order must be package , then import , then class . Option A is incorrect because class is before package and import . Option B is incorrect because import is before package . Option F is incorrect because class is before package . Option G is incorrect because class is before import .
+
+9.
+B, D. 
+The Rabbit object from line 3 has two references to it: one and three . The ref- erences are nulled out on lines 6 and 8, respectively. Option B is correct because this makes the object eligible for garbage collection after line 8. Line 7 sets the reference four to the now null one , which means it has no effect on garbage collection. The Rabbit object from line 4 only has a single reference to it: two . Option D is correct because this single reference becomes null on line 9. The Rabbit object declared on line 10 becomes eligible for garbage collection at the end of the method on line 12. Calling System.gc() has no effect on eligibility for garbage collection.
+
+10.
+C, D. 
+Java puts source code in .java files and bytecode in .class files. It does not use
+a .bytecode file. When running a Java program, you pass just the name of the class
+without the .class extension.

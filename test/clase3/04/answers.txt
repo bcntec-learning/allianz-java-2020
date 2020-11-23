@@ -1,0 +1,75 @@
+1.
+D, G. 
+Option D passes the initial parameter plus two more to turn into a vararg array
+of size 2. Option G passes the initial parameter plus an array of size 2. Option A does
+not compile because it does not pass the initial parameter. Options E and F do not
+compile because they do not declare an array properly. It should be new boolean[]
+{true} . Option B creates a vararg array of size 0 and option C creates a vararg array of
+size 1.
+
+2.
+B, E. 
+Line 10 does not compile because static methods are not allowed to call instance
+methods. Even though we are calling play() as if it were an instance method and an
+instance exists, Java knows play() is really a static method and treats it as such. If line
+10 is removed, the code works. It does not throw a NullPointerException on line 16
+because play() is a static method. Java looks at the type of the reference for rope2 and
+translates the call to Rope.play() .
+
+3.
+D. 
+There are two details to notice in this code. First, note that RopeSwing has an
+instance initializer and not a static initializer. Since RopeSwing is never constructed,
+the instance initializer does not run. The other detail is that length is static . Changes
+from one object update this common static variable.
+
+4.
+C.
+ For such questions, it is best to keep track of each variable on the notepad after executing each line of code.  The final values of the variables are as follows - x=2 y=1 z=1 a=1 b=2  The expression x>a?y>b?y:b:x>z?x:z; should be grouped as - x > a  ? (y>b ? y : b)  :  (x>z ? x : z);
+
+5.
+A.
+The arguments passed on the command line can be accessed using the args array. The first argument (i.e. good) is stored in args[0], second argument (i.e. bye) is stored in args[1] and so on.
+
+6.
+A, D, E
+Boolean class has two constructors - Boolean(String) and Boolean(boolean) The String constructor allocates a Boolean object representing the value true if the string argument is not null and is equal, ignoring case, to the string "true". Otherwise, allocate a Boolean object representing the value false. Examples: new Boolean("True") produces a Boolean object that represents true. new Boolean("yes") produces a Boolean object that represents false. 
+Boolean class has two static helper methods for creating booleans - parseBoolean and valueOf. Boolean.parseBoolean(String ) method returns a primitive boolean and not a Boolean object (Note - Same is with the case with other parseXXX methods such as Integer.parseInt - they return primitives and not objects). The boolean returned represents the value true if the string argument is not null and is equal, ignoring case, to the string "true"
+
+7.
+D
+When the program is run, the JVM looks for a method named main() which takes an array of Strings as input and returns nothing (i.e. the return type is void). But in this case, it doesn't find such a method ( the given main() method is returning long!) so it throws a java.lang.NoSuchMethodError.
+
+8.
+E
+If you declare a local variable (or a method parameter) with the same name as the instance field name, the local variable "shadows" the member field. Ideally, you should be able to access the member field in the method directly by using the name of the member (in this example, myValue). However, because of shadowing, when you use myValue, it refers to the local variable instead of the instance field.
+
+9.
+D
+This question tests your knowledge on the default values of uninitialized primitives and object references. booleans are initialized to false, numeric types to 0 and object references to null. Elements of arrays are initialized to the default values of their types. So, elements of a boolean array are initialized to false. int, char, float to 0 and Objects to null.  In this case, b is false. So the else part of if(b) is executed. ch is a numeric type to its value is 0. ba[0] = false assigns false to ba[0] and returns false which is assigned to x. Finally, x and ba[0] are printed as false false.
+
+10
+B.
+Observe that the method parameter k in checkIt shadows the instance variable k. Therefore, any changes made to k in checkIt will not affect the instance variable k. For checkIt method to access the instance variable k, you need to do this.k. 
+
+11.
+C.
+To create an instance of LocalDateTime, you need to use the methods in LocalDateTime class. Methods in LocalDate class create LocalDate instances. Similarly, methods in LocalTime class create LocalTime instances, so A is wrong. In B, the time part is not specified, so it is wrong. In D, the month is a String which is not allowed. Month.JANUARY would be right.
+
+12.
+A, B, E
+There is a subtle difference between: int[] i; and int i[]; although in both the cases, i is an array of integers. The difference is if you declare multiple variables in the same statement such as: int[] i, j; and int i[], j;, j is not of the same type in the two cases.
+
+13.
+E.
+ArrayList's remove(Object ) method returns a boolean. It returns true if the element is found in the list and false otherwise. The JavaDoc API description of this method is important for the exam -  
+
+14.
+D, F
+Options A and B are incorrect because LocalDate does not have a public constructor. Option C is incorrect because months start counting with 1 rather than 0. Option E is incorrect because it uses the old pre–Java 8 way of counting months, again
+beginning with 0. Options D and F are both correct ways of specifying the desired date.
+
+15.
+D. 
+A LocalDate does not have a time element. Therefore, it has no method to add
+hours and the code does not compile.
