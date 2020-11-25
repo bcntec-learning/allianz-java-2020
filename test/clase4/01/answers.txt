@@ -1,0 +1,108 @@
+1.
+B
+First, code written before Java 5 shouldn’t be affected by new Java features like
+autoboxing, therefore widening is preferred to boxing, producing "i". Second, you can’t widen
+from one wrapper to another. In this case, Integer is-Not-a Long, but Integer is-a Number.
+
+2.
+A
+A reference variable marked "final" cannot reference a different object,
+but the object it references can be changed.
+
+3.
+D.
+Obviously, this is horrible code—we’re trying to toughen you up for the real
+thing! Work these nested if statements from the inside out. The innermost "if" block
+is lines 9–11. The next set is lines 8 and 12, and finally lines 7 and 13. Given that, the
+first "if" is true, so the second "if" is evaluated. Since the second "if" test is false, its
+associated "else" (line 12) is executed.
+
+4.
+B, C, D, E
+B , C, D, and E are correct, as those classes will NOT compile. For class B, it’s okay to
+implement two interfaces, but the syntax is incorrect. For class C, classes extend other
+classes, they don’t implement them. For class D, it’s okay to extend AND implement,
+but the syntax is wrong. For class E, it’s legal to implement more than one interface, but
+interfaces are implemented, not extended.
+
+5.
+A B C D
+A, B, C, and D are correct. A, B, and C will invoke Cool’s version of doStuff(),
+and D will invoke SuperCool’s version of doStuff().
+
+6.
+G
+It’s legal, although uncommon to catch Errors. It’s legal to shadow the variable
+name "args". It’s legal to throw a runtime exception without handling it or declaring it.
+And finally, the catch block doesn’t catch the exception because exceptions don’t extend
+from Error.
+
+7.
+A
+B, C, D, E, and F are incorrect because it’s legal for overloaded methods to have different
+return types, throw different exceptions, and have different access modifiers. Overridden
+methods have stricter requirements, but lines 7–10 are overloaded methods. Line 11 is an
+overridden method, and it’s legal for overridden methods to have fewer exceptions and less
+restrictive access modifiers.
+
+8.
+F
+A and G do not enable assertions (in G, the -ea is seen as the second argument). B throws
+an ArrayIndexOutOfBoundsException. C and E are invalid syntax. D passes the
+assert test
+
+9.
+D
+D is correct. Classes extend abstract classes, they don’t implement them.
+A , B, C, E, F, and G are incorrect. The method on line 10 doesn’t need to be declared
+public because it’s an overload of the parent method, not an override.
+
+10.
+E
+E is correct. When defining multiple variables in a for loop, line 5 uses the correct syntax.
+A is incorrect, although if other issues were fixed in the code, line 9 would create that
+output. B is incorrect, although if line 7 was fixed, line 6 would cause an endless loop
+because the counter() method is not incrementing the for loop’s "j" variable. C, D, F,
+and G are incorrect because the rest of the code’s syntax is correct.
+
+11.
+A, C, F
+A, C, and F are correct. A and F are valid overloads of Big.doStuff(), and C is a valid
+override of Big.doStuff().
+B, D, and E are all illegal overrides of Big.doStuff().
+
+12.
+E
+E is correct. Remember that arrays are objects, and that each array dimension is a separate
+type. So, for instance, ia2 is of type “two dimensional int array”, which is a different type
+than ia1. Line 8 attempts to assign a one-dimensional array into an int.
+A , B, C, and D are incorrect because lines 4–7 perform legal array manipulations. F and G
+are incorrect based on the above.
+
+13.
+B
+B is correct. With "for" loops, the last things that happen are the iteration expression
+and then the conditional expression. With "while" loops, the body only executes if
+the expression is true. With "do" loops, the body executes first, before the expression is
+evaluated. The final loop is a legal "for each" loop.
+
+14
+A, D
+A and D are correct. It’s legal for an overriding method to throw fewer exceptions, and
+runtime exceptions are in a class hierarchy separate from checked exceptions.
+C would be correct if the invocation on line 5 was either handled or declared because
+it’s not an override. B is wrong because it’s a broader exception. E would be correct if the
+invocation on line 5 was either handled or declared.
+
+15
+C
+C is correct. This code shows a kind of variable “shadowing.” In the getSize() method,
+the question is whether to use the class’s static "hands" variable, or to use the
+superclass’s instance "hands" variable. The variable in the same class is used.
+
+16
+C
+Remember that a matching case represents the entry point for code
+execution, not the only point that will be executed. Also, even though the default
+comes before case "z", when the switch variable equals "z" the switch will skip the
+default and choose case "z".

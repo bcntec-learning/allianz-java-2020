@@ -1,0 +1,100 @@
+1.
+D.
+The DateTimeFormatter is for ISO_DATE_TIME, but there is no time part in LocalDate. THerefore you get a: java.time.temporal.UnsupportedTemporalTypeException: Unsupported field: HourOfDay
+
+2.
+A, D.
+Not B: circular definition of n3. 
+Not C: Compilation error. line Calc c = new Mid(); required: Calc found: Mid 
+Not E: Compilation error. line int n3 = Calc.findMid(n1, n2); non-static method findMid(int,int) cannot be
+
+3.
+B
+The while can only have one boolean 
+expression in the parentheses
+
+4
+B
+when you do obj2 = obj1 you're copying object references - you're not making a 
+copy of the object - and so the variables obj1 and obj2 will both point to the same object.
+
+5.
+C. 
+The interface takes two int parameters. The code on line 7 attempts to use them as
+if one is a StringBuilder . It is tricky to use types in a lambda when they are implicitly
+specified. Remember to check the interface for the real type.
+
+6.
+A, F. 
+Option B is incorrect because it does not use the return keyword. Options C, D,
+and E are incorrect because the variable e is already in use from the lambda and can-
+not be redefined. Additionally, option C is missing the return keyword and option E is
+missing the semicolon.
+
+7.
+A, D, F. 
+removeIf() expects a Predicate , which takes a parameter list of one param-
+eter using the specified type. Options B and C are incorrect because they do not use the
+return keyword. It is required inside braces for lambda bodies. Option E is incorrect
+because it is missing the parentheses around the parameter list. This is only optional
+for a single parameter with an inferred type.
+
+8.
+A. 
+This code is correct. Line 8 creates a lambda expression that checks if the age is less
+than 5. Since there is only one parameter and it does not specify a type, the parentheses
+around the type parameter are optional. Line 10 uses the Predicate interface, which
+declares a test() method.
+
+9.
+E. 
+On line 3 of OrderDriver , we refer to Order for the first time. At this point the stat-
+ics in Order get initialized. In this case, the statics are the static declaration of result
+and the static initializer. result is u at this point. On line 4, result is the same
+because the static initialization is only run once. On line 5, we create a new Order ,
+which triggers the instance initializers in the order they appear in the file. Now result
+is ucr . Line 6 creates another Order , triggering another set of initializers. Now result
+is ucrcr . Notice how the static is on a different line than the initialization code in
+lines 4–5 of Order . The exam may try to trick you by formatting the code like this to
+confuse you.
+
+10.
+A, B, G. 
+Options A and B are correct because the single vararg parameter is the last
+parameter declared. Option G is correct because it doesn’t use any vararg parameters
+at all. Options C and F are incorrect because the vararg parameter is not last. Option
+D is incorrect because two vararg parameters are not allowed in the same method.
+Option E is incorrect because the ... for a vararg must be after the type, not before it.
+
+11.
+E
+The order of catch blocks is important because they’re checked in the order they
+appear after the try block. Because ArithmeticException is a child class of Runtime-
+Exception , the catch block on line 7 is unreachable. (If an ArithmeticException is
+thrown in try try block, it will be caught on line 5.) Line 7 generates a compiler error
+because it is unreachable code.
+
+12.
+E
+ The parseName method is invoked within main() on a new Dog object. Line 4 prints
+1 . The try block executes and 2 is printed. Line 7 throws a NumberFormatException , so
+line 8 doesn’t execute. The exception is caught on line 9, and line 10 prints 4 . Because the
+exception is handled, execution resumes normally. parseName runs to completion, and
+line 17 executes, printing 5 . That’s the end of the program, so the output is 1245 .
+
+13
+A, C, D, E. 
+The method is allowed to throw no exceptions at all, making option A cor-
+rect. It is also allowed to throw runtime exceptions, making options D and E correct.
+Option C is also correct since it matches the signature in the interface.
+
+14.
+C, E. 
+Option C is allowed because it is a more specific type than RuntimeException .
+Option E is allowed because it isn’t in the same inheritance tree as RuntimeExcep-
+tion . It’s not a good idea to catch either of these. Option B is not allowed because the
+method called inside the try block doesn’t declare an IOException to be thrown. The
+compiler realizes that IOException would be an unreachable catch block. Option D
+is not allowed because the same exception can’t be specified in two different catch
+blocks. Finally, option A is not allowed because it’s more general than RuntimeExcep-
+tion and would make that block unreachable.
